@@ -5,9 +5,7 @@ export abstract class View<T> {
     this.elemento = document.querySelector(selector);
   }
 
-  template(model: T): string {
-    throw Error("Classe filha precisa implementar o template");
-  }
+  abstract template(model: T): string;
 
   update(model: T): void {
     // joga o template no elemento que foi escolhido no construtor
