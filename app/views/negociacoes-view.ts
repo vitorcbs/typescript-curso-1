@@ -27,7 +27,7 @@ export class NegociacoesView extends View<Negociacoes>{
                     return `
                     <tr>
                         <td>
-                            ${new Intl.DateTimeFormat().format(negociacao.data)}
+                            ${this.formatarData(negociacao.data)}
                         </td>
                         <td>
                             ${negociacao.quantidade}
@@ -44,6 +44,11 @@ export class NegociacoesView extends View<Negociacoes>{
         `;
   }
 
+
+
+    private formatarData(data: Date): string {
+        return new Intl.DateTimeFormat().format(data)
+    }
 }
 
 // .join() junta todas as strings de um array e separa ela de acordo com o que o usuario quer

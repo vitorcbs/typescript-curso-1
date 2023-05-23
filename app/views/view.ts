@@ -5,7 +5,7 @@ export abstract class View<T> {
     this.elemento = document.querySelector(selector);
   }
 
-  abstract template(model: T): string;
+  protected abstract template(model: T): string;
 
   update(model: T): void {
     // joga o template no elemento que foi escolhido no construtor
