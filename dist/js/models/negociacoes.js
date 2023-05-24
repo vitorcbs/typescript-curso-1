@@ -9,7 +9,3 @@ export class Negociacoes {
         return this.listaNegociacoes;
     }
 }
-const negociacoes = new Negociacoes();
-negociacoes.lista().forEach(n => {
-    '';
-});
